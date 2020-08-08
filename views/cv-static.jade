@@ -1,0 +1,107 @@
+extends layout
+
+block content
+	#wrapper
+		header#header
+			.logo
+				span.icon.fa-gem
+			.content
+				.inner
+					h1 #{title}
+					p Selamat Datang di CV Agung Wicaksono
+			nav
+				ul
+					li
+						a(href='#about') Tentang Saya
+					li
+						a(href='#education') Pendidikan
+					li
+						a(href='#experience') Pengalaman Kerja
+					li
+						a(href='#contact') Kontak
+		#main
+			// About
+			article#about
+				h2.major Tentang Saya
+				span.image.main
+					img(src='images/foto_profile_agungw.jpg', alt='Photo Profile')
+				p
+					| Hallo nama saya Agung Wicaksono. Panggilan saya Agung atau Wicaks. Saya bekerja sebagai PNS di UT sejak Tahun 2006.
+					| Saat ini saya bekerja di Unit UPT-TIK Kantor UT Pusat di Pondok Cabe.
+				p
+
+				.table-wrapper
+					table
+						tbody
+							tr
+								td Nama Lengkap
+								td :
+								td Agung Wicaksonno
+							tr
+								td Umur
+								td :
+								td 37 Tahun
+							tr
+								td Alamat
+								td :
+								td Kampung Poncol Lestari, Pamulang Timur, Tangerang Selatan
+							tr
+								td Email
+								td :
+								td agoenkwe@gmail.com
+
+			article#education
+				h2.major Pendidikan
+				ul.alt
+					li
+						h4 STMIK Jakarta
+						| 											S1 - Sistem Informasi 
+						br
+						| 											2018 - 2020
+					li
+						h4 AMIK Veteran Purwokerto
+						| 											D3 - Manajemen Informatika
+						br
+						| 											2001 - 2003
+
+			article#experience
+				h2.major Pengelaman Kerja
+				ul.alt
+					li
+						h4 Staf ICT
+						| 											Universitas Terbuka 
+						br
+						| 											April 2006 - Sekarang (Lebih kurang 14 Tahun)
+
+			article#contact
+				h2.major Kontak
+				form(method='post', action='#')
+					.fields
+						.field.half
+							label(for='name') Name
+							input#name(type='text', name='name')
+						.field.half
+							label(for='email') Email
+							input#email(type='text', name='email')
+						.field
+							label(for='message') Message
+							textarea#message(name='message', rows='4')
+					ul.actions
+						li
+							input.primary(type='submit', value='Send Message')
+						li
+							input(type='reset', value='Reset')
+				ul.icons
+					li
+						a.icon.brands.fa-twitter(href='agoenkwe')
+							span.label Twitter
+					li
+						a.icon.brands.fa-facebook-f(href='agungwicaksono')
+							span.label Facebook
+					li
+						a.icon.brands.fa-instagram(href='agoenkwe')
+							span.label Instagram
+					li
+						a.icon.brands.fa-github(href='github.com/agungwe/')
+							span.label GitHub
+
